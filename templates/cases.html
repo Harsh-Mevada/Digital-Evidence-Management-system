@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cases</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/dashboard">Dashboard</a>
+</div>
+
+<div class="container">
+
+<a href="/dashboard" class="btn btn-secondary">← Back</a>
+
+<h2>Case Management</h2>
+
+<div class="card">
+
+<form method="POST">
+
+<input name="name" placeholder="Case Name">
+<textarea name="description" placeholder="Description"></textarea>
+
+<button>Add Case</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Case Name</th>
+<th>Description</th>
+</tr>
+
+{% for c in cases %}
+<tr>
+<td>{{ c.id }}</td>
+<td>{{ c.case_name }}</td>
+<td>{{ c.description }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

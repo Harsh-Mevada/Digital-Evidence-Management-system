@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Evidence</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/dashboard">Dashboard</a>
+</div>
+
+<div class="container">
+
+<a href="/dashboard" class="btn btn-secondary">← Back</a>
+
+<h2>Evidence List</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>File</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+
+{% for e in evidences %}
+<tr>
+
+<td>{{ e.id }}</td>
+<td>{{ e.file_name }}</td>
+
+<td>
+<span class="badge badge-safe">{{ e.status }}</span>
+</td>
+
+<td>
+<a href="/download/{{ e.id }}" class="btn btn-primary">Download</a>
+<a href="/delete/{{ e.id }}" class="btn btn-danger">Delete</a>
+</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verify</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/dashboard">Dashboard</a>
+</div>
+
+<div class="container">
+
+<a href="/dashboard" class="btn btn-secondary">← Back</a>
+
+<h2>Evidence Verification</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>File</th>
+<th>Status</th>
+</tr>
+
+{% for r in results %}
+<tr>
+
+<td>{{ r.id }}</td>
+<td>{{ r.name }}</td>
+
+<td>
+{% if r.status == "SAFE" %}
+<span class="badge badge-safe">SAFE</span>
+
+{% elif r.status == "TAMPERED" %}
+<span class="badge badge-tampered">TAMPERED</span>
+
+{% else %}
+<span class="badge badge-warning">MISSING</span>
+{% endif %}
+</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

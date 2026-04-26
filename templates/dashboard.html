@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/dashboard">Dashboard</a>
+<a href="/upload">Upload</a>
+<a href="/evidence">Evidence</a>
+<a href="/logs">Logs</a>
+<a href="/report">Report</a>
+<a href="/cases">Cases</a>
+<a href="/verify">Verify</a>
+</div>
+
+<div class="container">
+
+<h2>Dashboard</h2>
+
+<div class="card">
+<h4>Total Cases</h4>
+<h2>{{ case_count }}</h2>
+</div>
+
+<br>
+
+<div class="card">
+<h4>Total Evidence</h4>
+<h2>{{ evidence_count }}</h2>
+</div>
+
+<br>
+
+<a href="/upload" class="btn btn-success">Upload Evidence</a>
+<a href="/evidence" class="btn btn-primary">View Evidence</a>
+<a href="/logs" class="btn btn-secondary">Logs</a>
+<a href="/report" class="btn btn-dark">Forensic Report</a>
+<a href="/cases" class="btn btn-info">Cases</a>
+<a href="/verify" class="btn btn-warning">Verify</a>
+
+</div>
+
+</body>
+</html>

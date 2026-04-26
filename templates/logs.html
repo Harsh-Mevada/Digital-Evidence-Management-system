@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logs</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="/dashboard">Dashboard</a>
+</div>
+
+<div class="container">
+
+<a href="/dashboard" class="btn btn-secondary">← Back</a>
+
+<h2>Custody Logs</h2>
+
+<table>
+
+<tr>
+<th>Evidence</th>
+<th>Action</th>
+<th>User</th>
+<th>Time</th>
+</tr>
+
+{% for log in logs %}
+<tr>
+<td>{{ log.evidence_id }}</td>
+<td>{{ log.action }}</td>
+<td>{{ log.user }}</td>
+<td>{{ log.timestamp }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("Digital Evidence Management System Loaded");
