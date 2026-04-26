@@ -8,8 +8,7 @@ from models import db, User, Evidence, Case, CustodyLog
 
 app = Flask(__name__)
 app.config.from_object(config)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.db"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
 
 UPLOAD_FOLDER = config.UPLOAD_FOLDER
